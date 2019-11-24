@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primuz Burger</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sobre.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-3" style="background-color: #E67E22;">
+        <a class="navbar-brand ml-5" href="../index.html"><img src="../img/logo-primuz-burgers.svg" alt="Primuz Burger Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item">
+              <a class="nav-link ml-4" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-4" href="cardapio.html">Cardápio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-4" href="sobre.html">Sobre</a>
+            </li>
+            <a class="btn btn-warning ml-4" href="#" style="min-width:150px; color: white; background: #E67E22; border-color: #fff;border-radius: 30px;">Reserva</a>
+          </ul>
+        </div>
+      </nav>
+
+      <section>
+          <h1 class="text-center mt-5 mb-5 titulo">Reserva</h1>       
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                  <form name="form1" action="../server/grava.jsp" method="POST">
+                      <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <input type="text" name="txtnome" class="form-control" id="inputNome" placeholder="Nome Completo">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <input type="text" name="txttelefone" class="form-control" id="telefone" placeholder="Telefone">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <input type="email" name="txtemail" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>                        
+                        <div class="form-group col-md-4">
+                            <select id="inputPessoas" name="inputPessoas" class="form-control">
+                                <option selected value="1 pessoa">1 pessoa</option>
+                                <option value="2 pessoas">2 pessoas</option>
+                                <option value="3 pessoas">3 pessoas</option>
+                                <option value="4 pessoas">4 pessoas</option>
+                                <option value="5 pessoas">5 pessoas</option>
+                              </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select id="inputHora" name="inputHora" class="form-control">
+                                <option selected value="Meio Dia">Meio Dia</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                              </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="date" class="form-control" name="inputData" id="inputData" min="2019-11-27">
+                        </div>                                                
+                      </div>
+                      <div class="text-center">
+
+                        <button type="submit" onclick="verificar()" class="btn btn-primary my-1" style="background: #E67E22; border-color: #E67E22;">Confirmar Reserva</button>
+                      </div>
+                    </form>               
+              </div>
+            </div>
+          </div>
+      </section>
+      <section>
+          <div class="container">
+              <h1 class="text-center mt-5 mb-5 titulo">Localização</h1>
+              <div class="row">  
+                  <div class="col-lg-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.2346859676572!2d-46.54413678538665!3d-23.451997663446875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef52f4f5d3ffb%3A0x971d465472ea4ca5!2sPrimuz%20Burger!5e0!3m2!1spt-BR!2sbr!4v1573777266999!5m2!1spt-BR!2sbr" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  </div>
+                  <div class="col-lg-5">
+                      <h6>Endereço</h6>
+                      <p>Av. Suplicy, 52 - Vila Sao Paulo, Guarulhos - SP, 07096-000</p>
+                      <h6>Horario de Funcionamento</h6>
+                      <p>Seg a Quinta: 12:00-00:00
+                             <br> Sexta e Sabado: 11:30-23:30<br>
+                              Domingo: 12:00-21:00</p>
+                      <h6>Telefone</h6>
+                      <p> (11) 4968-2582</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section  style="background: #E67E22;">
+          <div class="container py-4 mt-5">
+              <div class="row">
+                  <div class="col-lg-4">
+                      <h6 class="text-light">MAPA DA SITE</h6>
+                      <ul class="list-unstyled">
+                          <li><a class="text-light" href="../index.html">Home</a></li>
+                          <li><a class="text-light" href="../pages/cardapio.html">Cardápio</a></li>
+                          <li><a class="text-light" href="../pages/sobre.html">Sobre</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-4">
+                      <h6 class="text-light">PRECISA DE AJUDA?</h6>
+                      <ul class="list-unstyled">
+                          <li><a class="text-light" href="#">Tel: (11) 4968-2582</a></li>
+                          <li><a class="text-light" href="#">contato@primuzburgers.com</a></li>
+                          <li><a class="text-light" href="#">Chatbot</a></li>
+                       </ul>                    
+                  </div>
+                  <div class="col-lg-4">
+                      <h6 class="text-light">REDES SOCIAIS</h6>
+                      <ul class="list-unstyled">
+                          <li><a class="text-light" href="#">Facebook</a></li>
+                          <li><a class="text-light" href="#">Twitter</a></li>
+                          <li><a class="text-light" href="#">Instagram</a></li>
+                      </ul>   
+                  </div>
+              </div>
+          </div>
+      </section>
+    
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script type="text/javascript">
+      $("#telefone, #celular").mask("(00) 00000-0000");
+      </script>
+</body>
+</html>

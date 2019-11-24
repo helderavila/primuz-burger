@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700&display=swap');
+
+.cardapio a {
+    padding: 10px;
+}
+
+.itens {
+    padding: 10px 0;
+}
+
+.itens li p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 16px;
+    margin-top: -40px;
+    margin-left: 105px;
+}
+
+.itens li span {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.itens li img {
+    margin-top: 20px;
+}
+
+.ativo::after {
+    content: "";
+    display: block;
+    width: 135px;
+    height: 8px;
+    background: #E67E22;
+    margin: 5px auto;
+}
